@@ -9,9 +9,8 @@ const routes = require('./routes');
 app.use(bodyParser.json());
 app.use(cors());
 
-const url = "mongodb+srv://harun:12345@cluster0.z2q5bhi.mongodb.net/lonca-db?retryWrites=true&w=majority";
+const url = "mongodb+srv://user:12345@cluster0.z2q5bhi.mongodb.net/lonca-db?retryWrites=true&w=majority";
 
-// Connect to MongoDB
 mongoose.connect(url , {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -21,10 +20,8 @@ connection.once('open', () => {
     console.log('Connected to MongoDB');
 });
 
-// Define your routes here
 app.use('/api', routes);
 
-// Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

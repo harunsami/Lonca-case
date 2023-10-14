@@ -3,7 +3,7 @@ const Vendor = require('./models/vendors');
 const Product = require('./models/products');
 const Order = require('./models/orders');
 
-const url = "mongodb+srv://harun:12345@cluster0.z2q5bhi.mongodb.net/lonca-db?retryWrites=true&w=majority";
+const url = "mongodb+srv://user:12345@cluster0.z2q5bhi.mongodb.net/lonca-db?retryWrites=true&w=majority";
 
 mongoose.connect(url, { useNewUrlParser: true , useUnifiedTopology: true})
     .then((result) => console.log('connection OK'))

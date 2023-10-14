@@ -14,21 +14,6 @@ router.get('/vendors', async (req, res) => {
     }
 });
 
-// router.get('/products', async (req, res) => {
-//     try {
-//         const id = req.query.id; // Get the productId from the query string
-//
-//         const product = await Product.findOne({ id: id });
-//         //console.log(product)
-//         if (product) {
-//             res.json({ name: product.name }); // Return the name of the product
-//         } else {
-//             res.status(404).json({ error: 'Product not found' });
-//         }
-//     } catch (error) {
-//         res.status(500).json({ error: 'Internal server error' });
-//     }
-// });
 
 router.get('/vendor/:id/getOrders', async (req, res) => {
     try {
