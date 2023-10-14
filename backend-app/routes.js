@@ -18,7 +18,6 @@ router.get('/vendors', async (req, res) => {
 router.get('/vendor/:id/getOrders', async (req, res) => {
     try {
         const vendorId = req.params.id;
-        console.log(vendorId)
 
         const orders = await Order.find({
             cart_item: {
