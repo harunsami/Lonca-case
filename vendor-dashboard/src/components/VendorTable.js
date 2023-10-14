@@ -13,7 +13,6 @@ const VendorTable = () => {
         fetch('http://localhost:3001/api/vendors')
             .then((response) => response.json())
             .then((data) => {
-                console.log('Data:', data);
                 setVendors(data);
             })
             .catch((error) => console.error('Error:', error));
